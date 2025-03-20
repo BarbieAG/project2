@@ -29,8 +29,7 @@ function setup(){
         }
         treats.push(treat)
     }
-    // fill("yellow")
-    // square(0,0,20)
+   
 }
 function draw(){
   background("black")
@@ -38,8 +37,9 @@ function draw(){
   fill("yellow")
   drawTreats()
   fill("orange")
-  square(mouseX * 0.8,  mouseY * 0.8, 20)
-  console
+  square(mouseX * 2,  mouseY * 2, 20)
+  fill("white")
+  square(760,560,20)
   
   
 }
@@ -61,7 +61,7 @@ function drawEnemies(){
         enemy.y += enemy.step
        
         square(enemy.x, enemy.y, 20)
-        let distance = dist(enemy.x, enemy.y, mouseX * 0.8, mouseY * 0.8)
+        let distance = dist(enemy.x, enemy.y, mouseX * 1, mouseY * 1)
         if (distance < 5){
             playerLife -= 1
         }
